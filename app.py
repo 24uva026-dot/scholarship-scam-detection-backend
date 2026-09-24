@@ -11,11 +11,10 @@ from nltk.stem import WordNetLemmatizer
 
 app = Flask(__name__)
 
-# Load models
-text_model = joblib.load("/content/scholarship_scam_detection/scholarship_text_xgboost.pkl")
-text_tfidf = joblib.load("/content/scholarship_scam_detection/scholarship_text_tfidf.pkl")
-url_model = joblib.load("/content/scholarship_scam_detection/scholarship_url_xgboost.pkl")
-tld_mapping = joblib.load("/content/scholarship_scam_detection/scholarship_tld_mapping.pkl")
+text_model = joblib.load("scholarship_text_xgboost.pkl")
+text_tfidf = joblib.load("scholarship_text_tfidf.pkl")
+url_model = joblib.load("scholarship_url_xgboost.pkl")
+tld_mapping = joblib.load("scholarship_tld_mapping.pkl")
 
 # Text preprocessing
 stop_words = set(stopwords.words("english"))
