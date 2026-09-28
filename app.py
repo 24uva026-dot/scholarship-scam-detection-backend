@@ -26,8 +26,8 @@ tld_mapping = joblib.load(BASE_DIR / "scholarship_tld_mapping.pkl")
 # -----------------------------------------------------------------------------
 # Text preprocessing - kept consistent with model training
 # -----------------------------------------------------------------------------
-stop_words = set(stopwords.words("english"))
-lemmatizer = WordNetLemmatizer()
+stop_words = set()
+lemmatizer = None
 
 
 def preprocess_text(text):
